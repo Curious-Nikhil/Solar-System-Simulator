@@ -1,7 +1,7 @@
 # Solar-System-Simulator
 
 **CREATED - 1ST MAY 2017**
-https://nssdc.gsfc.nasa.gov/planetary/planetfact.html
+
 
 **UPDATES**
 
@@ -24,9 +24,8 @@ https://nssdc.gsfc.nasa.gov/planetary/planetfact.html
 
 **Ideas**
 
-1. How to find the angle between two planets - 
-    Nu2 - Nu1 = 44 degrees for Hohmanns Tranfer
-2.
+1.How to find the angle between two planets - 
+  Nu2 - Nu1 = 44 degrees for Hohmanns Tranfer
 
 ### Credits
 
