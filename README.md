@@ -2,6 +2,12 @@
 
 **CREATED - 1ST MAY 2017**
 
+Website - http://bit.ly/spacetime_web
+Science - https://spacetimeweb.wixsite.com/home/science
+Telescope - https://spacetimeweb.wixsite.com/home/telescope
+Flickr Pics - https://www.flickr.com/photos/spacetimeweb/
+SubReddit - https://www.reddit.com/r/SpacetimeWeb/
+About - https://spacetimeweb.wixsite.com/home/about
 
 **UPDATES**
 
@@ -14,18 +20,20 @@
 
 **WHAT TO DO?**
 
-1.MAKE A UNIVERSAL PLANET FUNCTION!
-2.HOHMANN'S TRANSFER ORBIT TRAJECTORY
-3.GRAVITY SIMULATION
-4.Zoom out Function
-5.GUI - Buttons and Sliders
-6.SCALED PLANETS, MOONS AND SUN
-7.SCENES
+- MAKE A UNIVERSAL PLANET FUNCTION!
+- HOHMANN'S TRANSFER ORBIT TRAJECTORY
+- GRAVITY SIMULATION
+- Zoom out Function
+- GUI - Buttons and Sliders
+- SCALED PLANETS, MOONS AND SUN
+- SCENES
+
 
 **Ideas**
 
-1.How to find the angle between two planets - 
-  Nu2 - Nu1 = 44 degrees for Hohmanns Tranfer
+- How to find the angle between two planets - 
+- Nu2 - Nu1 = 44 degrees for Hohmanns Tranfer
+
 
 ### Credits
 
