@@ -2,12 +2,13 @@
 
 **CREATED - 1ST MAY 2017**
 
-Website - http://bit.ly/spacetime_web
-Science - https://spacetimeweb.wixsite.com/home/science
-Telescope - https://spacetimeweb.wixsite.com/home/telescope
-Flickr Pics - https://www.flickr.com/photos/spacetimeweb/
-SubReddit - https://www.reddit.com/r/SpacetimeWeb/
-About - https://spacetimeweb.wixsite.com/home/about
+- Website - http://bit.ly/spacetime_web
+- Science - https://spacetimeweb.wixsite.com/home/science
+- Telescope - https://spacetimeweb.wixsite.com/home/telescope
+- Flickr Pics - https://www.flickr.com/photos/spacetimeweb/
+- SubReddit - https://www.reddit.com/r/SpacetimeWeb/
+- About - https://spacetimeweb.wixsite.com/home/about
+
 
 **UPDATES**
 
