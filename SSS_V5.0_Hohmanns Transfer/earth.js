@@ -1,4 +1,4 @@
-function earth = {
+function earth() = {
     this.size: 10,
     a:1.00000011, //AU
     b:b(149.6,0.0167),//SemiMinor Axis 10^6 km
