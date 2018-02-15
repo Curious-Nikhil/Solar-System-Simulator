@@ -12,7 +12,18 @@ function setup() {
   print(daysnow);
   var str2 = "2/14/2018"
   print(dateDiff( str2 ));
-  print(n(1));
+  print(M(357.529, 0.985608, 1460.5, 0));
+  var tempg = EccAnom(0.04849, 141.324, 5)
+  print(tempg);
+  var tempan = Nu(0.04849, tempg, 5);
+
+  var tempi = TrueAnom(0.01671, 357.529)
+  var tempgen = or(1.00000,0.01671,tempi)
+
+  print("Final X")
+  print(hx(5.40406, 100.464, 273.867, 1.303, tempi));
+
+
 }
 
 function draw() {

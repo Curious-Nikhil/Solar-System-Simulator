@@ -1,16 +1,5 @@
-/*************************
-1. Mean Anomaly
-2. True Anomaly
-3. Distance r to the Sun
-4. Cal heliocentric Ecliptic Coordinates - x, y
-*/
 
-function n (amajor) {
-  //calculate which angle "n" the planet traverses on average per day
-   var n = (0.9856076686/(pow(amajor, 3/2));
 
-   return n;
-}
 
 /**
 function Planet() {
