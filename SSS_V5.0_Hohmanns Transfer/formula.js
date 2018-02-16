@@ -86,16 +86,18 @@ function or (semimajor, eccentricity, angle) {
 /************************************
 *STEP 4 - HELIOCENTRIC COORDINATES
 ************************************/
-function hx(or, lomega, omega, i, Nu) {
-  var hx = or * (cos(lomega)*cos(omega + Nu)) - (sin(lomega)*cos(i)*sin(omega + Nu));
-  return hx;
+function hecx(or, lomega, omega, i, Nu) {
+  var result = or * (cos(lomega)*cos(omega + Nu)) - (sin(lomega)*cos(i)*sin(omega + Nu));
+  return result;
 }
-function hy(or, lomega, omega, i, Nu) {
-  hy = or * (sin(lomega)*cos(omega + Nu)) + (cos(lomega)*cos(i)*sin(omega + Nu));
-
-  return hy;
+function hey(or, lomega, omega, i, Nu) {
+  hey = or * (sin(lomega)*cos(omega + Nu)) + (cos(lomega)*cos(i)*sin(omega + Nu));
+  return hey;
 }
-
+function wow(or, lomega, omega, i, Nu) {
+  result = or * (sin(lomega)*cos(omega + Nu)) + (cos(lomega)*cos(i)*sin(omega + Nu));
+  return result;
+}
 
 
 /*********************************************************************/

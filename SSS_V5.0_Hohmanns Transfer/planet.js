@@ -1,5 +1,68 @@
+function Planet(size, a, e, Mo, nd, capomega, omega, i) {
+  this.size = size;
+  this.a = a;
+  this.Mo = Mo; //j200 Mean ANOMALY
+  this.Ta = 0; //True Anomaly
+  this.e = e;
+  this.capomega = capomega; //capital lomega
+  this.omega = omega;
+  this.i = i; //inlination
+  this.nd = nd; //nowday
+  this.hx = 0;
+  this.hy = 0;
+  this.x = cx;
+  this.y = cy;
+  this.cn = 0;
+  this.ma = 0;
+}
+Planet.prototype.ephemeris = function() {
+  /*************************
+   *STEP 1 - MEAN ANOMALY
+   *************************/
+  //cn is n - avg angle per semimajor M = function(Mo, n, nowday, startday
+  this.cn = n(this.a);
+  //ma is Mean ANOMALY
+  //startDate is 0, because J200
+  this.ma = M(this.Mo, this.cn, this.nd, 0);
+  /*************************
+   *STEP 2 - TRUE ANOMALY
+   *************************/
+  this.Ta = TrueAnom(this.e, this.ma);
+  /*************************
+   *STEP 3 - ORIBITAL RADIUS or (semimajor, eccentricity, angle) {
+   *************************/
+   this.or = or(this.a, this.e, this.Ta);
+   /*************************
+    *STEP 4 - HELIOCENTRIC COORDINATES
+     hex(or, lomega, omega, i, Nu) {
+     hey(or, lomega, omega, i, Nu) {
+    *************************/
+    this.hx = hecx(this.or, this.capomega, this.omega, this.i, this.Ta);
+    //this.hy = hey(this.or, this.capomega, this.omega, this.i, this.Ta);
+    this.hy = wow(this.or, this.capomega, this.omega, this.i, this.Ta);
+}
+Planet.prototype.move = function() {
 
+}
 
+Planet.prototype.show = function() {
+  noFill();
+  ellipse(cx, cy, this.a, b(this.a, this.e));
+  fill(200);
+  this.nd+=100;
+  var temp9 = this.hx;
+  var temp5 = this.hy;
+  ellipse(cx - this.hx,this.hy + cy, 10, 10);
+}
+
+Planet.prototype.gui = function() {
+  text("Planet X " + round(this.hx), 10, 560);
+  text("Planet Y " + round(this.hy), 10, 580);
+  text("Mean Anomaly " + this.ma, 100, 560);
+  text("True Anomaly " + this.Ta, 100, 580);
+  text("Orbit Radius " + round(this.or), 400, 560);
+
+}
 
 /**
 function Planet() {

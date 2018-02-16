@@ -3,32 +3,24 @@ var AU = 1495978.707;
 var cx;
 var cy;
 var hey;
-
+var earth_data;
 function setup() {
   createCanvas(600, 600);
   cx = width/2;
   cy = height/2;
-  var daysnow = DayDiff(0, 6500);
-  print(daysnow);
-  var str2 = "2/14/2018"
-  print(dateDiff( str2 ));
-  print(M(357.529, 0.985608, 1460.5, 0));
-  var tempg = EccAnom(0.04849, 141.324, 5)
-  print(tempg);
-  var tempan = Nu(0.04849, tempg, 5);
-
-  var tempi = TrueAnom(0.01671, 357.529)
-  var tempgen = or(1.00000,0.01671,tempi)
-
-  print("Final X")
-  print(hx(5.40406, 100.464, 273.867, 1.303, tempi));
-
-
+  //size, a, e, Mo, nd, capomega, omega, i
+  earth = new Planet(20, 149.60, 0.0167, 357.529, 1460.5, 174.873, 288.064, 0);
 }
 
 function draw() {
   background(10);
   fill("yellow");
   ellipse(cx, cy, 25);
-
+  earth.ephemeris();
+  earth.show();
+  earth.gui();
+  // text(earth.hx, cx, 550);
+  // text(earth.hy, cx, 500);
+  // mars.move();
+  // mars.show();
 }
