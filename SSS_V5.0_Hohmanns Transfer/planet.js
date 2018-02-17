@@ -41,26 +41,22 @@ Planet.prototype.ephemeris = function() {
     //this.hy = hey(this.or, this.capomega, this.omega, this.i, this.Ta);
     this.hy = wow(this.or, this.capomega, this.omega, this.i, this.Ta);
 }
-Planet.prototype.move = function() {
-
-}
-
 Planet.prototype.show = function() {
   noFill();
   ellipse(cx, cy, this.a, b(this.a, this.e));
   fill(200);
   this.nd+=100;
-  var temp9 = this.hx;
-  var temp5 = this.hy;
-  ellipse(cx - this.hx,this.hy + cy, 10, 10);
+  ellipse(cx - this.hx,cy - this.hy, 10, 10);
 }
 
 Planet.prototype.gui = function() {
   text("Planet X " + round(this.hx), 10, 560);
   text("Planet Y " + round(this.hy), 10, 580);
-  text("Mean Anomaly " + this.ma, 100, 560);
-  text("True Anomaly " + this.Ta, 100, 580);
+  text("Mean Anomaly " + round(this.ma), 100, 560);
+  text("True Anomaly " + round(this.Ta), 100, 580);
   text("Orbit Radius " + round(this.or), 400, 560);
+  text("Orbit Radius " + round(this.or), 400, 560);
+  text("Distance " + round(this.or*149.6), 400, 580);
 
 }
 
