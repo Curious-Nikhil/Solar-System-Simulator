@@ -67,7 +67,6 @@ Yet, below is complete *breakdown* of how it works.
 
 ### Inspiration
 - [Hohmanns Transfer Postion](https://space.stackexchange.com/questions/4406/hohmann-transfer-equation-of-motion%5D) 
-- - 
 - Calculate True Anomaly - [http://www.jgiesen.de](http://www.jgiesen.de/kepler/kepler.html)
 -  Calculation of Time:
 - - [Number of days between two dates](https://stackoverflow.com/questions/542938/how-do-i-get-the-number-of-days-between-two-dates-in-javascript) 
