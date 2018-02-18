@@ -3,9 +3,13 @@
 ## Version History
 
 **Version 1 - MAY 2017**
+
 **Version 2 - JULY 2017**
+
 **Version 3 - SEP 2017**
+
 **Version 4 - Jan 2018**
+
 **Version 5 -**
 
 ----------
@@ -63,7 +67,7 @@ Yet, below is complete *breakdown* of how it works.
 
 ### Inspiration
 -  Calculate True Anomaly - [http://www.jgiesen.de](http://www.jgiesen.de/kepler/kepler.html)
--  Calculate of Time
+-  Calculation of Time:
 - - [Number of days between two dates](https://stackoverflow.com/questions/542938/how-do-i-get-the-number-of-days-between-two-dates-in-javascript) 
 - - [Calculate Date by adding days to a Date](https://www.khanacademy.org/computer-programming/number-of-days-to-a-date-20/5153033213509632)
 - [Calculate Position of Planets](https://aa.quae.nl/en/reken/hemelpositie.html)  *Link might be insecure*
