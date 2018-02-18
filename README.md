@@ -75,7 +75,7 @@ Yet, below is complete *breakdown* of how it works.
 
 ## Milestones
 
-### Hohmans Tranfer Orbit
+### Hohmans Transfer Orbit
 ![Delta V required for orbit to change](https://c1.staticflickr.com/5/4263/35592200735_5d03f7b69b_b.jpg)
 ![Beginning Stage - Planning](https://c1.staticflickr.com/5/4209/35461982491_b0bbae2f83_b.jpg)
 [Link to Flickr Album](https://www.flickr.com/photos/spacetimeweb/albums/72157682805439283)
