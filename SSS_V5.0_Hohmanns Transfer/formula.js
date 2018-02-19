@@ -120,7 +120,7 @@ var newDate = function() {
   F = F("dis", "with(dis)return new Date(" +  args + ")");
   return F(this);
 }
-function DayDiff(startday, days) {
+function DayDiff(days) {
   var dayNames = [
       "Sunday", "Monday", "Tuesday", "Wednesday",
       "Thursday", "Friday", "Saturday"
@@ -130,6 +130,7 @@ function DayDiff(startday, days) {
   var endDate = newDate(startDate.getTime() + ms);
   return endDate;
 }
+
 //To find no of days between two specific dates
 /*
 https://stackoverflow.com/questions/542938/how-do-i-get-the-number-of-days-between-two-dates-in-javascript

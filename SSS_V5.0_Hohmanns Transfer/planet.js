@@ -45,7 +45,7 @@ Planet.prototype.show = function() {
   noFill();
   ellipse(cx, cy, this.a, b(this.a, this.e));
   fill(200);
-  this.nd+=100;
+  this.nd+=10;
   ellipse(cx - this.hx,cy - this.hy, 10, 10);
 }
 
