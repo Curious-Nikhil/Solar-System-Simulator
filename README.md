@@ -1,5 +1,5 @@
 # Solar-System-Simulator
-[LINK TO PROGRAM](https://cdn.rawgit.com/Curious-Nikhil/Solar-System-Simulator/01aded5a/SSS_V5.0_Hohmanns%20Transfer/index.html)
+[LINK TO PROGRAM](https://curious-nikhil.github.io/Solar-System-Simulator/SSS_V5.0_Hohmanns%20Transfer/)
 ## Version History
 
 **Version 1 - MAY 2017**
