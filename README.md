@@ -1,5 +1,8 @@
 # Solar-System-Simulator
 [LINK TO PROGRAM](https://curious-nikhil.github.io/Solar-System-Simulator/SSS_V5.0_Hohmanns%20Transfer/)
+
+![](https://image.ibb.co/hLk42c/image.png)
+
 ## Version History
 
 **Version 1 - MAY 2017**
@@ -75,8 +78,5 @@ Yet, below is complete *breakdown* of how it works.
 - [Help from Khan Academy Community](https://www.khanacademy.org/profile/curiousnikhil/projects)
 
 ## Milestones
-
-### Hohmans Transfer Orbit
-![Delta V required for orbit to change](https://c1.staticflickr.com/5/4263/35592200735_5d03f7b69b_b.jpg)
-![Beginning Stage - Planning](https://c1.staticflickr.com/5/4209/35461982491_b0bbae2f83_b.jpg)
-[Link to Flickr Album](https://www.flickr.com/photos/spacetimeweb/albums/72157682805439283)
+* Hohmans Transfer Orbit
+* Data Visualization
