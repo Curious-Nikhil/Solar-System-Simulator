@@ -14,7 +14,7 @@ function Planet(size, a, e, Mo, nd, capomega, omega, i) {
   this.y = cy;
   this.cn = 0;
   this.ma = 0;
-}
+ }
 Planet.prototype.ephemeris = function() {
   /*************************
    *STEP 1 - MEAN ANOMALY
@@ -44,11 +44,10 @@ Planet.prototype.ephemeris = function() {
 Planet.prototype.show = function() {
   noFill();
   ellipse(cx, cy, this.a, b(this.a, this.e));
-  fill(200);
+  fill(200); //0, 18, 255
   this.nd+=10;
   ellipse(cx - this.hx,cy - this.hy, 10, 10);
 }
-
 Planet.prototype.gui = function() {
   text("Planet X " + round(this.hx), 10, 560);
   text("Planet Y " + round(this.hy), 10, 580);
@@ -59,6 +58,19 @@ Planet.prototype.gui = function() {
   text("Distance " + round(this.or*149.6), 400, 580);
 
 }
+function Hohmann() {
+  this.pa = 0; //Probe's Semimajor
+  this.pe = 0; //Probe's Eccentricity
+}
+
+Hohmann.prototype.transfer = function() {
+  //new pa = (earth r (perihelion) + mars r (aphelion))
+  this.pa = (earth.or + mars.or)/2;
+  this.pe = 1 - (earth.or/this.pa)
+
+}
+
+
 
 function Star() {
   this.x = random(-width, width);
