@@ -5,6 +5,7 @@ var cy;
 var uix;
 var uiy;
 var input;
+var stars = [];
 
 function setup() {
   canvas = createCanvas(600, 600);
@@ -25,6 +26,12 @@ function setup() {
   cx = width/2;
   cy = height/2;
   //size, a, e, Mo, nd, capomega, omega, i
+  let ix = random(cx*2);
+  let iy = random(cy*2);
+  for (var i = 0; i < 800; i++) {
+    stars[i] = new Star();
+  }
+
   earth = new Planet(20, 149.60, 0.0167, 357.529, 1460.5, 174.873, 288.064, 0);
   mars = new Planet(10, marsdata.a, marsdata.e, marsdata.lomega)
 }
@@ -37,10 +44,10 @@ function draw() {
   earth.show();
   earth.gui();
   text(earth.nd, 10, 20);
-  // mars.gui();
-  // mars.ephemeris();
-  // mars.show();
 
+  for ( var i = 0; i < stars.length; i++) {
+    stars[i].show();
+  }
 }
 
 function inputdate(datein) {

@@ -60,6 +60,31 @@ Planet.prototype.gui = function() {
 
 }
 
+function Star() {
+  this.x = random(-width, width);
+  this.y = random(-height, height);
+  this.show = function() {
+    fill(random(255));
+    noStroke();
+    ellipse(this.x, this.y, 2, 2);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
 function Planet() {
   this.radius = 6300;
