@@ -99,7 +99,6 @@ function wow(or, lomega, omega, i, Nu) {
   return result;
 }
 
-
 /*********************************************************************/
 //Date + No of days = Present Date
 /*  var startday = 0;//J200
@@ -149,4 +148,27 @@ function b (semimajor, eccentricity) {
 function ecc (semiminor, semimajor) {
   var ecc = 1 - (sq(semiminor) / sq(semimajor));
   return ecc;
+}
+
+/********************************************************************
+*PROBE
+*********************************************************************/
+//pe = probes eccentric Anomaly
+/*
+a  is the semi-major axis and e is the eccentricity.
+The central body being orbited (e.g. the Sun) is at (0,0).
+For a Hohmann transfer, you are going from periapsis to apoapsis, or vice-versa,
+so run τ from 0 to π, or π to 2π. You may need to rotate the (x,y) coordinates
+to line up with your departure and arrival points.
+τ is not time. It is the eccentric anomaly.
+*/
+function probex (pmajor, pe, pea) {
+  result = pmajor*(cos(pea) - pe);
+  return result;
+}
+
+function probey (pmajor, pe, pea) {
+  result =  (pmajor*(sqrt(1 - sq(pe)))*sin(pea));
+
+  return result;
 }

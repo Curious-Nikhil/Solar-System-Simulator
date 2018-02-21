@@ -61,16 +61,28 @@ Planet.prototype.gui = function() {
 function Hohmann() {
   this.pa = 0; //Probe's Semimajor
   this.pe = 0; //Probe's Eccentricity
+  this.pea = 0;
+  this.px = 0;
+  this.py = 0;
 }
-
 Hohmann.prototype.transfer = function() {
   //new pa = (earth r (perihelion) + mars r (aphelion))
   this.pa = (earth.or + mars.or)/2;
   this.pe = 1 - (earth.or/this.pa)
 
+  this.px = probex(this.pa, this.pe, this.pea);
+  this.py = probey(this.pa, this.pe, this.pea);
 }
 
+Hohmann.prototype.show = function() {
+  //orbit
 
+  //probe point
+  
+  this.pea+=(PI/100);
+
+
+}
 
 function Star() {
   this.x = random(-width, width);
@@ -81,7 +93,6 @@ function Star() {
     ellipse(this.x, this.y, 2, 2);
   }
 }
-
 
 
 
