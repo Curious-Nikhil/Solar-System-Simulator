@@ -30,6 +30,8 @@ There are two way to build one of these sims *(simulators)*: **Accurate** and **
 Well I started of with the formal, and ever since have transversed to the latter eventually. I would **recommend**, building a **simple** planetary orbit first to understand the basic of programming and polar to cartesian coordinate conversions.*(I am still a beginner)*
 Yet, below is complete *breakdown* of how it works.
 ![Early flowchart](https://preview.ibb.co/igA7J7/Solar_System_Simulator_Flowchart.png)
+***
+![Calculations Flowchart](https://image.ibb.co/bNeu3H/Solar_System_Sim_V_4_5.png)
 
 ----------
 
