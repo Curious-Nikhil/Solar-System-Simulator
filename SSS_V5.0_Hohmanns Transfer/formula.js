@@ -79,8 +79,10 @@ function TrueAnom(e,M) {
 /*************************
 *STEP 3 - ORIBITAL RADIUS
 *************************/
-function or (semimajor, eccentricity, angle) {
-  var or = ((semimajor) * (1 - sq(eccentricity))) / (1 + (eccentricity * (cos(angle))));
+function or (a, e, angle) {
+  var t1 = a*(1 - sq(e));
+  var t2 = 1 + (e*cos(angle));
+  var or =  t1/t2;
   return or;
 }
 /************************************
@@ -90,10 +92,11 @@ function hecx(or, lomega, omega, i, Nu) {
   var result = or * (cos(lomega)*cos(omega + Nu)) - (sin(lomega)*cos(i)*sin(omega + Nu));
   return result;
 }
-function hey(or, lomega, omega, i, Nu) {
-  hey = or * (sin(lomega)*cos(omega + Nu)) + (cos(lomega)*cos(i)*sin(omega + Nu));
-  return hey;
-}
+
+// function hey(or, lomega, omega, i, Nu) {
+//   hey = or * (sin(lomega)*cos(omega + Nu)) + (cos(lomega)*cos(i)*sin(omega + Nu));
+//   return hey;
+// }
 function wow(or, lomega, omega, i, Nu) {
   result = or * (sin(lomega)*cos(omega + Nu)) + (cos(lomega)*cos(i)*sin(omega + Nu));
   return result;

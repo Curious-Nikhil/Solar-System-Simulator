@@ -1,8 +1,9 @@
-function Planet(size, a, e, Mo, nd, capomega, omega, i) {
+function Planet(size, a, e, n, Mo, nd, capomega, omega, i) {
   this.size = size;
   this.a = a;
   this.Mo = Mo; //j200 Mean ANOMALY
   this.Ta = 0; //True Anomaly
+  this.n = n;
   this.e = e;
   this.capomega = capomega; //capital lomega
   this.omega = omega;
@@ -14,16 +15,19 @@ function Planet(size, a, e, Mo, nd, capomega, omega, i) {
   this.y = cy;
   this.cn = 0;
   this.ma = 0;
+  this.tx = 0;
+  this.ty = 0; //testing vars
  }
 Planet.prototype.ephemeris = function() {
   /*************************
    *STEP 1 - MEAN ANOMALY
    *************************/
   //cn is n - avg angle per semimajor M = function(Mo, n, nowday, startday
-  this.cn = n(this.a);
+  //this.cn = n(this.a); - wrong code
+  text("n " + this.n, 10, 100);
   //ma is Mean ANOMALY
   //startDate is 0, because J200
-  this.ma = M(this.Mo, this.cn, this.nd, 0);
+  this.ma = M(this.Mo, this.n, this.nd, 0);
   /*************************
    *STEP 2 - TRUE ANOMALY
    *************************/
@@ -37,24 +41,24 @@ Planet.prototype.ephemeris = function() {
      hex(or, lomega, omega, i, Nu) {
      hey(or, lomega, omega, i, Nu) {
     *************************/
-    this.hx = hecx(this.or, this.capomega, this.omega, this.i, this.Ta);
+    this.hx = -149.6*hecx(this.or, this.capomega, this.omega, this.i, this.Ta);
     //this.hy = hey(this.or, this.capomega, this.omega, this.i, this.Ta);
-    this.hy = wow(this.or, this.capomega, this.omega, this.i, this.Ta);
+    this.hy = 149.6*wow(this.or, this.capomega, this.omega, this.i, this.Ta);
 }
 Planet.prototype.show = function() {
-  noFill();
-  ellipse(cx, cy, this.a, b(this.a, this.e));
+  
+  ellipse(cx, cy,this.a, b(this.a, this.e));
   fill(200); //0, 18, 255
-  this.nd+=10;
-  ellipse(cx - this.hx,cy - this.hy, 10, 10);
+  this.nd+=0.01;
+  ellipse(cx - this.hx, cy - this.hy, 10);
 }
+
 Planet.prototype.gui = function() {
-  text("Planet X " + round(this.hx), 10, 560);
-  text("Planet Y " + round(this.hy), 10, 580);
-  text("Mean Anomaly " + round(this.ma), 100, 560);
-  text("True Anomaly " + round(this.Ta), 100, 580);
-  text("Orbit Radius " + round(this.or), 400, 560);
-  text("Orbit Radius " + round(this.or), 400, 560);
+  text("Planet X " + this.hx, 10, 400);
+  text("Planet Y " + this.hy, 10, 450);
+  text("Mean Anomaly " + this.ma, 100, 560);
+  text("True Anomaly " + this.Ta, 100, 580);
+  text("Orbit Radius " + this.or, 400, 560);
   text("Distance " + round(this.or*149.6), 400, 580);
 
 }
@@ -78,7 +82,7 @@ Hohmann.prototype.show = function() {
   //orbit
 
   //probe point
-  
+
   this.pea+=(PI/100);
 
 

@@ -31,8 +31,7 @@ function setup() {
   for (var i = 0; i < 800; i++) {
     stars[i] = new Star();
   }
-
-  earth = new Planet(20, 149.60, 0.0167, 357.529, 1460.5, 174.873, 288.064, 0);
+  earth = new Planet(20 /*size*/, 1/*a*/, 0.0167/*e*/, 0.985608/*n*/, 357.529/*Mo*/, 100/*nowday*/, 174.873/*cO*/, 288.064/*O*/, 0/*i*/);
   mars = new Planet(10, marsdata.a, marsdata.e, marsdata.lomega)
 }
 
@@ -43,14 +42,9 @@ function draw() {
   earth.ephemeris();
   earth.show();
   earth.gui();
-  text(earth.nd, 10, 20);
+  text(2000 + earth.nd/365, 10, 20);
 
   for ( var i = 0; i < stars.length; i++) {
     stars[i].show();
   }
-}
-
-function inputdate(datein) {
-  //function DayDiff(startday, days) {
-  var result = DateDiff(datein);
 }
