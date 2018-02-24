@@ -79,10 +79,11 @@ function TrueAnom(e,M) {
 /*************************
 *STEP 3 - ORIBITAL RADIUS
 *************************/
+//var or =
 function or (a, e, angle) {
   var t1 = a*(1 - sq(e));
   var t2 = 1 + (e*cos(angle));
-  var or =  t1/t2;
+  var or =  (t1/t2);
   return or;
 }
 /************************************

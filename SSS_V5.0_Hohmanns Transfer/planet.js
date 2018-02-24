@@ -1,4 +1,4 @@
-function Planet(size, a, e, n, Mo, nd, capomega, omega, i) {
+function Planet(col, size, a, e, n, Mo, nd, capomega, omega, i) {
   this.size = size;
   this.a = a;
   this.Mo = Mo; //j200 Mean ANOMALY
@@ -13,6 +13,7 @@ function Planet(size, a, e, n, Mo, nd, capomega, omega, i) {
   this.hy = 0;
   this.x = cx;
   this.y = cy;
+  this.col = col; // colour variable
   this.cn = 0;
   this.ma = 0;
   this.tx = 0;
@@ -41,21 +42,24 @@ Planet.prototype.ephemeris = function() {
      hex(or, lomega, omega, i, Nu) {
      hey(or, lomega, omega, i, Nu) {
     *************************/
-    this.hx = -149.6*hecx(this.or, this.capomega, this.omega, this.i, this.Ta);
+    this.hx = 149.6*hecx(this.or, this.capomega, this.omega, this.i, this.Ta);
     //this.hy = hey(this.or, this.capomega, this.omega, this.i, this.Ta);
     this.hy = 149.6*wow(this.or, this.capomega, this.omega, this.i, this.Ta);
 }
 Planet.prototype.show = function() {
-  
-  ellipse(cx, cy,this.a, b(this.a, this.e));
-  fill(200); //0, 18, 255
-  this.nd+=0.01;
+  noFill();
+  stroke(255)
+  ellipse(cx, cy,2*this.a*149.6, 2*149.6*b(this.a, this.e));
+  fill(this.col);
+  noStroke();
+  //this.nd+=0.01;
   ellipse(cx - this.hx, cy - this.hy, 10);
 }
 
 Planet.prototype.gui = function() {
-  text("Planet X " + this.hx, 10, 400);
-  text("Planet Y " + this.hy, 10, 450);
+  fill(255)
+  text("Planet X " + this.hx/149.6, 10, 400);
+  text("Planet Y " + this.hy/149.6, 10, 450);
   text("Mean Anomaly " + this.ma, 100, 560);
   text("True Anomaly " + this.Ta, 100, 580);
   text("Orbit Radius " + this.or, 400, 560);
