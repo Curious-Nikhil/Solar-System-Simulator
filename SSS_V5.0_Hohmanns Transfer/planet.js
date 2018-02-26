@@ -36,15 +36,18 @@ Planet.prototype.ephemeris = function() {
   /*************************
    *STEP 3 - ORIBITAL RADIUS or (semimajor, eccentricity, angle) {
    *************************/
-   this.or = or(this.a, this.e, this.Ta);
+  this.or = or(this.a, this.e, this.Ta);
    /*************************
     *STEP 4 - HELIOCENTRIC COORDINATES
      hex(or, lomega, omega, i, Nu) {
      hey(or, lomega, omega, i, Nu) {
     *************************/
-    this.hx = 149.6*hecx(this.or, this.capomega, this.omega, this.i, this.Ta);
+  this.rx = 149.6*this.or*cos(this.Ta);
+  this.ry = 149.6*this.or*sin(this.Ta);
+
+  this.hx = 149.6*hecx(this.or, this.capomega, this.omega, this.i, this.Ta);
     //this.hy = hey(this.or, this.capomega, this.omega, this.i, this.Ta);
-    this.hy = 149.6*wow(this.or, this.capomega, this.omega, this.i, this.Ta);
+  this.hy = -149.6*hey(this.or, this.capomega, this.omega, this.i, this.Ta);
 }
 Planet.prototype.show = function() {
   noFill();
@@ -52,11 +55,13 @@ Planet.prototype.show = function() {
   ellipse(cx, cy,2*this.a*149.6, 2*149.6*b(this.a, this.e));
   fill(this.col);
   noStroke();
-  //this.nd+=0.01;
-  ellipse(cx - this.hx, cy - this.hy, 10);
+  ellipse(cx - this.hx,cy - this.hy, 10);
+  this.nd+=0.1;
+
 }
 
 Planet.prototype.gui = function() {
+  
   fill(255)
   text("Planet X " + this.hx/149.6, 10, 400);
   text("Planet Y " + this.hy/149.6, 10, 450);
@@ -93,10 +98,10 @@ Hohmann.prototype.show = function() {
 }
 
 function Star() {
-  this.x = random(-width, width);
+  this.x = random(-width, width - 100);
   this.y = random(-height, height);
   this.show = function() {
-    fill(random(255));
+    fill(random(100,255));
     noStroke();
     ellipse(this.x, this.y, 2, 2);
   }

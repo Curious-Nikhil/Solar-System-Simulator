@@ -74,7 +74,7 @@ function TrueAnom(e,M) {
 
   e5=Math.pow(e,5);
   result5=(M+(2*e-0.25*e3+5/96*e5)*Math.sin(M)+(1.25*e2-11/24*e4)*Math.sin(2*M)+(13/12*e3-43/64*e5)*Math.sin(3*M)+103/96*e4 *Math.sin(4*M)+1097/960*e5*Math.sin(5*M))/K;
-  return result5;
+  return result3;
 }
 /*************************
 *STEP 3 - ORIBITAL RADIUS
@@ -94,10 +94,10 @@ function hecx(or, lomega, omega, i, Nu) {
   return result;
 }
 
-// function hey(or, lomega, omega, i, Nu) {
-//   hey = or * (sin(lomega)*cos(omega + Nu)) + (cos(lomega)*cos(i)*sin(omega + Nu));
-//   return hey;
-// }
+function hey(or, lomega, omega, i, Nu) {
+  var hey = or * (sin(lomega)*cos(omega + Nu)) + (cos(lomega)*cos(i)*sin(omega + Nu));
+  return hey;
+}
 function wow(or, lomega, omega, i, Nu) {
   result = or * (sin(lomega)*cos(omega + Nu)) + (cos(lomega)*cos(i)*sin(omega + Nu));
   return result;
